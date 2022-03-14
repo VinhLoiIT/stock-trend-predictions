@@ -1,8 +1,26 @@
+import yaml
 from fastapi import FastAPI
 
-from modules.random import RandomPredictor
 
-module = RandomPredictor()
+def create_module():
+    with open('config.yaml', 'rt') as f:
+        config = yaml.safe_load(f)
+
+    if config['module'] == 'distilbert':
+        from modules.bert_sentiment import DistilBERTPredictor
+        checkpoint_dir = config['weights']
+        module = DistilBERTPredictor(checkpoint_dir)
+        return module
+
+    if config['module'] == 'random':
+        from modules.random import RandomPredictor
+        module = RandomPredictor()
+        return module
+
+    raise ValueError(f'Unknow module name = {config["module"]}')
+
+
+module = create_module()
 app = FastAPI()
 
 
