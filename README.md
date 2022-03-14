@@ -48,6 +48,8 @@ http://0.0.0.0:8000/docs
 
 Here you can try out some availables API
 
+![](images/screenshot.png)
+
 # Progress
 
 1. Data Preparation (See README in the `data` folder)
