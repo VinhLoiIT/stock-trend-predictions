@@ -1,0 +1,2 @@
+module: distilbert
+weights: weights/20220314_distilbert
