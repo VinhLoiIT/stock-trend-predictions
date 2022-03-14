@@ -10,7 +10,6 @@ Problem statement:
 Project structure:
 ```
 .
-├── __pycache__
 ├── data
 │   ├── daily-financial-news
 │   └── huge-stock-market
@@ -20,14 +19,6 @@ Project structure:
 │       ├── ETFs
 │       └── Stocks
 ├── modules
-│   ├── __pycache__
-│   ├── bert-sentiment-analysis
-│   │   ├── logs
-│   │   │   ├── 1647210510.1840448
-│   │   │   └── 1647210582.3093703
-│   │   └── results
-│   │       └── checkpoint-500
-│   └── fast-text
 ├── papers
 └── weights
     └── 20220314_distilbert
